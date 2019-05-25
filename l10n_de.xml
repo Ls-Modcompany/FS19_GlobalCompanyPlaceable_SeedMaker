@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<l10n>
+	<elements>
+		<e k="GlobalCompanyPlaceable_SeedMaker_FactoryName" v="SeedMaker"/>
+		<e k="GlobalCompanyPlaceable_SeedMaker_FactoryDescription" v="Der SeedMaker stellt aus Getreide Saatgut her."/>
+		<e k="GlobalCompanyPlaceable_SeedMaker_productLine_seed" v="Saatgutherstellung"/>
+	</elements>
+</l10n>

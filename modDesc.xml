@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="43">
+	<author>kevink98/LS-Modcompany</author>
+    <version>1.0.0.0</version>
+    
+	<title>
+        <en><![CDATA[SeedMaker]]></en>
+    </title>
+    
+	<description>
+		<en><![CDATA[The SeedMaker makes seeds from grain.]]>
+		</en>
+		<de><![CDATA[Der SeedMaker stellt aus Getreide Saatgut her.]]>
+		</de>
+	</description>
+    
+	<iconFilename>store.dds</iconFilename>
+    <multiplayer supported="true"/>  
+	
+	<l10n>
+		<text name="function_seedMaker">
+			<en><![CDATA[The SeedMaker makes seeds from grain.]]></en>
+			<de><![CDATA[Der SeedMaker stellt aus Getreide Saatgut her.]]></de>
+		</text>		
+	</l10n>	
+	
+	<extraSourceFiles>
+		<sourceFile filename="GC_Checker.lua" />
+    </extraSourceFiles>
+	
+	<globalCompany minimumVersion="1.0.0.0" />
+  	
+	<storeItems>
+        <storeItem xmlFilename="seedMaker.xml"/>
+    </storeItems>
+
+    <brands>
+        <brand name="GCPLACEABLE" title="GlobalCompany Placeable" image="../FS19_GlobalCompany/brand_placeable.dds"/>
+    </brands>
+</modDesc>

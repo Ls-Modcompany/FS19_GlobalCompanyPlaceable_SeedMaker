@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<l10n>
+	<elements>
+		<e k="Saegewerk_TestMod_FactoryName" v="Sawmill"/>
+		<e k="Saegewerk_TestMod_FactoryDescription" v="Produce boardwood using Logs and Woodchips."/>
+		<e k="Saegewerk_TestMod_fillType_Logs" v="Logs"/>
+		<e k="Saegewerk_TestMod_productLine_boards" v="Board Production"/>
+	</elements>
+</l10n>

@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable>
+    <storeData>
+        <name>SeedMaker</name>
+        <image>store.dds</image>
+        <price>45000</price>
+        <dailyUpkeep>10</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>GCPLACEABLE</brand>
+		<functions>
+			<function>$l10n_function_seedMaker</function>
+        </functions>
+        <species>placeable</species>
+        <category>globalCompanyPlaceable</category>
+    </storeData>
+
+    <placeableType>GC_ProductionFactoryPlaceable</placeableType>
+    <filename>seedMaker.i3d</filename>
+    <placement testSizeX="10" testSizeZ="5" sizeX="15" sizeZ="8" useRandomYRotation="false" useManualYRotation="true" />
+	
+	<tipOcclusionUpdateArea sizeX="15" sizeZ="8" />	
+	
+	<clearAreas>
+        <clearArea startIndex="7|0" widthIndex="7|1" heightIndex="7|2"/>
+    </clearAreas>
+	
+	<productionFactories>
+		<productionFactory indexName="SEEDMAKER" saveId="globalCompany_seedMaker">
+			<guiInformation title="GlobalCompanyPlaceable_SeedMaker_FactoryName" imageFilename="store.dds" description="Saegewerk_TestMod_FactoryDescription"/>
+			
+			<operation updateDelayMinutes="10" showInGlobalGUI="true" canPurchaseInputs="true"/>
+
+			<registerLoadingTriggers>
+				<loadingTrigger name="LoadingTrigger" triggerNode="trigger" fillLitersPerSecond="500" autoStart="false">
+					<dischargeInfo dischargeNode="dischargeNode" />
+					<sounds fillSoundIdentifier="fillSound01" />
+					<effectNode effectNode="grain" materialType="unloading" materialTypeId="3" fadeTime="0.5" />
+					<effectNode effectNode="smoke" materialType="smoke"     materialTypeId="1" fadeTime="0.5" />
+
+					<triggerStatus>
+						<!-- <fallOffShader node="mapTargetMarker" /> -->
+						<!--visNodes noObjectNode="green" foundObjectNode="yellow" fillingActiveNode="red" /-->
+					</triggerStatus>
+				</loadingTrigger>
+			</registerLoadingTriggers>
+			
+			<registerUnloadingTriggers>
+				<unloadingTrigger name="UnloadingTrigger" exactFillRootNode="exactFillRootNode" />
+			</registerUnloadingTriggers>
+			
+			<registerInputProducts>				
+				<inputProduct name="IP_GRAIN" capacity="50000" >
+					<fillTypes>
+						<fillType name="wheat" />
+						<fillType name="barley" />
+					</fillTypes>
+				
+					<inputMethods>
+						<unloadingTrigger name="UnloadingTrigger"/>
+					</inputMethods>	
+					
+					
+					<digitalDisplays>
+						<display displayType="LEVEL" numbers="IN_Display" emptyNumberColor="1 0 0 1" numberColor="1 1 0 1" fullNumberColor="0 1 0 1"/>
+					</digitalDisplays>
+				</inputProduct>
+			</registerInputProducts>
+			
+			<registerOutputProducts>
+				<outputProduct name="OP_SEED" fillType="seeds" capacity="50000" >
+					<outputMethods>
+						<loadingTrigger name="LoadingTrigger" />
+						<objectSpawner xmlFilename="$data/objects/bigBagContainer/bigBagContainerSeeds.xml">
+							<area startNode="start1" endNode="end1" />
+							<area startNode="start2" endNode="end2" />
+						</objectSpawner>
+					</outputMethods>
+					
+
+					<digitalDisplays>
+						<display displayType="LEVEL" numbers="OP_Display" emptyNumberColor="0 1 0 1" numberColor="1 1 0 1" fullNumberColor="1 0 0 1"/>
+					</digitalDisplays>
+				</outputProduct>
+			</registerOutputProducts>
+			
+			<productLines>
+				<productLine autoLineStart="true" outputPerHour="1000" name="GlobalCompanyPlaceable_SeedMaker_productLine_seed" >
+					<inputs>
+						<inputProduct name="IP_GRAIN" percent="100" />
+					</inputs>
+					
+					<outputs>
+						<outputProduct name="OP_SEED" percent="100" />
+					</outputs>
+					
+					<playerTrigger playerTriggerNode="PlayerTrigger" drawUI="false"/>
+					
+					<operatingParts>						
+						<sounds>
+							<sound geSoundNode="audio"/>
+						</sounds>
+
+						<lighting>
+							<beaconLights>
+								<beaconLight node="beacon" filename="$data/shared/assets/beaconLights/lizard/beaconLight01.xml" />
+							</beaconLights>
+						</lighting>
+					</operatingParts>
+				</productLine>
+			</productLines>	
+			
+			<i3dMappings>  
+				<i3dMapping id="exactFillRootNode" node="2|0" />
+    			<i3dMapping id="IN_Display" node="2|1" />			
+				<i3dMapping id="dischargeNode" node="3|0|1" />
+				<i3dMapping id="OP_Display" node="3|1" />
+				<i3dMapping id="start1" node="6|0" />
+				<i3dMapping id="end2" node="6|1|0" />
+				<i3dMapping id="start2" node="6|1" />
+				<i3dMapping id="end1" node="6|0|0" />
+				<i3dMapping id="PlayerTrigger" node="4" />
+				<i3dMapping id="beacon" node="8" />
+				<i3dMapping id="trigger" node="3|0|0" />
+				<i3dMapping id="grain" node="3|0|2|0" />
+    			<i3dMapping id="smoke" node="3|0|2|1" />
+    			<i3dMapping id="audio" node="9" />
+			</i3dMappings>
+				
+		</productionFactory>
+	</productionFactories>
+</placeable>
