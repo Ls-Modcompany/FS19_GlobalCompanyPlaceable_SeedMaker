@@ -59,7 +59,7 @@
 					<inputMethods>
 						<unloadingTrigger name="UnloadingTrigger"/>
 					</inputMethods>	
-					
+
 					
 					<digitalDisplays>
 						<display displayType="LEVEL" numbers="IN_Display" emptyNumberColor="1 0 0 1" numberColor="1 1 0 1" fullNumberColor="0 1 0 1"/>
