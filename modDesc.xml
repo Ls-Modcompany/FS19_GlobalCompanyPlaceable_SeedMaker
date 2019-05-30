@@ -12,6 +12,8 @@
 		</en>
 		<de><![CDATA[Der SeedMaker stellt aus Getreide Saatgut her.]]>
 		</de>
+		<es><![CDATA[La SeedMaker fabrica semillas a partir de grano.]]>
+		</es>
 	</description>
     
 	<iconFilename>store.dds</iconFilename>
@@ -21,6 +23,7 @@
 		<text name="function_seedMaker">
 			<en><![CDATA[The SeedMaker makes seeds from grain.]]></en>
 			<de><![CDATA[Der SeedMaker stellt aus Getreide Saatgut her.]]></de>
+			<es><![CDATA[La SeedMaker fabrica semillas a partir de grano.]]></es>
 		</text>		
 	</l10n>	
 	
