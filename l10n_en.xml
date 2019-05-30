@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <l10n>
 	<elements>
-		<e k="Saegewerk_TestMod_FactoryName" v="Sawmill"/>
-		<e k="Saegewerk_TestMod_FactoryDescription" v="Produce boardwood using Logs and Woodchips."/>
-		<e k="Saegewerk_TestMod_fillType_Logs" v="Logs"/>
-		<e k="Saegewerk_TestMod_productLine_boards" v="Board Production"/>
+		<e k="GlobalCompanyPlaceable_SeedMaker_FactoryName" v="SeedMaker"/>
+		<e k="GlobalCompanyPlaceable_SeedMaker_FactoryDescription" v="The SeedMaker makes seeds from grain."/>
+		<e k="GlobalCompanyPlaceable_SeedMaker_productLine_seed" v="Seedproduction"/>
+		<e k="GlobalCompanyPlaceable_SeedMaker_Input1" v="Grain"/>
+		<e k="GlobalCompanyPlaceable_SeedMaker_Output1" v="Seeds"/>
 	</elements>
 </l10n>
