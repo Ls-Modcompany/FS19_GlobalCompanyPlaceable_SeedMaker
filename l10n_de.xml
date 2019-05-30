@@ -4,5 +4,7 @@
 		<e k="GlobalCompanyPlaceable_SeedMaker_FactoryName" v="SeedMaker"/>
 		<e k="GlobalCompanyPlaceable_SeedMaker_FactoryDescription" v="Der SeedMaker stellt aus Getreide Saatgut her."/>
 		<e k="GlobalCompanyPlaceable_SeedMaker_productLine_seed" v="Saatgutherstellung"/>
+		<e k="GlobalCompanyPlaceable_SeedMaker_Input1" v="Getreide"/>
+		<e k="GlobalCompanyPlaceable_SeedMaker_Output1" v="Saatgut"/>
 	</elements>
 </l10n>

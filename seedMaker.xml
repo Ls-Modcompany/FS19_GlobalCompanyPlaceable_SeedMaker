@@ -27,7 +27,7 @@
 	
 	<productionFactories>
 		<productionFactory indexName="SEEDMAKER" saveId="globalCompany_seedMaker">
-			<guiInformation title="GlobalCompanyPlaceable_SeedMaker_FactoryName" imageFilename="store.dds" description="Saegewerk_TestMod_FactoryDescription"/>
+			<guiInformation title="GlobalCompanyPlaceable_SeedMaker_FactoryName" imageFilename="store.dds" description="GlobalCompanyPlaceable_SeedMaker_FactoryDescription"/>
 			
 			<operation updateDelayMinutes="10" showInGlobalGUI="true" canPurchaseInputs="true"/>
 
@@ -50,7 +50,7 @@
 			</registerUnloadingTriggers>
 			
 			<registerInputProducts>				
-				<inputProduct name="IP_GRAIN" capacity="50000" >
+				<inputProduct name="IP_GRAIN" capacity="50000" title="GlobalCompanyPlaceable_SeedMaker_Input1" >
 					<fillTypes>
 						<fillType name="wheat" />
 						<fillType name="barley" />
@@ -68,7 +68,7 @@
 			</registerInputProducts>
 			
 			<registerOutputProducts>
-				<outputProduct name="OP_SEED" fillType="seeds" capacity="50000" >
+				<outputProduct name="OP_SEED" fillType="seeds" capacity="50000" title="GlobalCompanyPlaceable_SeedMaker_Output1" >
 					<outputMethods>
 						<loadingTrigger name="LoadingTrigger" />
 						<objectSpawner xmlFilename="$data/objects/bigBagContainer/bigBagContainerSeeds.xml">
