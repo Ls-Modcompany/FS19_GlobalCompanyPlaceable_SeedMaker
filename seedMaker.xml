@@ -35,7 +35,7 @@
 				<unloadingTrigger name="UnloadingTriggerGrain" exactFillRootNode="exactFillRootNode1" />
 				<unloadingTrigger name="UnloadingTriggerLiquid" exactFillRootNode="exactFillRootNode2" />
 			</registerUnloadingTriggers>
-			
+
 			<registerLoadingTriggers>
 				<loadingTrigger name="LoadingTrigger" triggerNode="trigger" fillLitersPerSecond="500" autoStart="false">
 					<dischargeInfo dischargeNode="dischargeNode" />
@@ -69,7 +69,15 @@
 					</fillTypes>				
 					<inputMethods>
 						<unloadingTrigger name="UnloadingTriggerLiquid"/>
-					</inputMethods>						
+					</inputMethods>		
+					<movers>
+						<mover node="plane1">
+							<scale minimum="0.99 0 0.99" maximum="0.99 0.99 0.99" />
+						</mover>
+						<mover node="plane2">
+							<scale minimum="0.99 0 0.99" maximum="0.99 0.99 0.99" />
+						</mover>
+					</movers>				
 					<digitalDisplays>
 						<display displayType="LEVEL" numbers="IN_Display2" emptyNumberColor="1 0 0 1" numberColor="1 1 0 1" fullNumberColor="0 1 0 1"/>
 					</digitalDisplays>
@@ -134,6 +142,8 @@
 				<i3dMapping id="grain" node="3|0|2|0" />
     			<i3dMapping id="smoke" node="3|0|2|1" />
     			<i3dMapping id="audio" node="9" />
+				<i3dMapping id="plane1" node="11|1" />
+    			<i3dMapping id="plane2" node="10|1" />
 			</i3dMappings>				
 		</productionFactory>
 	</productionFactories>
