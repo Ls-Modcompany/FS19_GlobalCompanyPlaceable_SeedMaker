@@ -30,7 +30,12 @@
 			<guiInformation title="GlobalCompanyPlaceable_SeedMaker_FactoryName" imageFilename="store.dds" description="GlobalCompanyPlaceable_SeedMaker_FactoryDescription"/>
 			
 			<operation updateDelayMinutes="10" showInGlobalGUI="true" canPurchaseInputs="true"/>
-
+			
+			<registerUnloadingTriggers>
+				<unloadingTrigger name="UnloadingTriggerGrain" exactFillRootNode="exactFillRootNode1" />
+				<unloadingTrigger name="UnloadingTriggerLiquid" exactFillRootNode="exactFillRootNode2" />
+			</registerUnloadingTriggers>
+			
 			<registerLoadingTriggers>
 				<loadingTrigger name="LoadingTrigger" triggerNode="trigger" fillLitersPerSecond="500" autoStart="false">
 					<dischargeInfo dischargeNode="dischargeNode" />
@@ -45,24 +50,28 @@
 				</loadingTrigger>
 			</registerLoadingTriggers>
 			
-			<registerUnloadingTriggers>
-				<unloadingTrigger name="UnloadingTrigger" exactFillRootNode="exactFillRootNode" />
-			</registerUnloadingTriggers>
-			
 			<registerInputProducts>				
 				<inputProduct name="IP_GRAIN" capacity="50000" title="GlobalCompanyPlaceable_SeedMaker_Input1" >
 					<fillTypes>
 						<fillType name="wheat" />
 						<fillType name="barley" />
-					</fillTypes>
-				
+					</fillTypes>				
 					<inputMethods>
-						<unloadingTrigger name="UnloadingTrigger"/>
-					</inputMethods>	
-
-					
+						<unloadingTrigger name="UnloadingTriggerGrain"/>
+					</inputMethods>						
 					<digitalDisplays>
-						<display displayType="LEVEL" numbers="IN_Display" emptyNumberColor="1 0 0 1" numberColor="1 1 0 1" fullNumberColor="0 1 0 1"/>
+						<display displayType="LEVEL" numbers="IN_Display1" emptyNumberColor="1 0 0 1" numberColor="1 1 0 1" fullNumberColor="0 1 0 1"/>
+					</digitalDisplays>
+				</inputProduct>
+				<inputProduct name="IP_LIQUID" capacity="2000" title="GlobalCompanyPlaceable_SeedMaker_Input2" >
+					<fillTypes>
+						<fillType name="liquidfertilizer" />
+					</fillTypes>				
+					<inputMethods>
+						<unloadingTrigger name="UnloadingTriggerLiquid"/>
+					</inputMethods>						
+					<digitalDisplays>
+						<display displayType="LEVEL" numbers="IN_Display2" emptyNumberColor="1 0 0 1" numberColor="1 1 0 1" fullNumberColor="0 1 0 1"/>
 					</digitalDisplays>
 				</inputProduct>
 			</registerInputProducts>
@@ -74,10 +83,9 @@
 						<objectSpawner xmlFilename="$data/objects/bigBagContainer/bigBagContainerSeeds.xml">
 							<area startNode="start1" endNode="end1" />
 							<area startNode="start2" endNode="end2" />
+							<area startNode="start3" endNode="end3" />
 						</objectSpawner>
-					</outputMethods>
-					
-
+					</outputMethods>	
 					<digitalDisplays>
 						<display displayType="LEVEL" numbers="OP_Display" emptyNumberColor="0 1 0 1" numberColor="1 1 0 1" fullNumberColor="1 0 0 1"/>
 					</digitalDisplays>
@@ -88,19 +96,16 @@
 				<productLine autoLineStart="true" outputPerHour="1000" name="GlobalCompanyPlaceable_SeedMaker_productLine_seed" >
 					<inputs>
 						<inputProduct name="IP_GRAIN" percent="100" />
-					</inputs>
-					
+						<inputProduct name="IP_LIQUID" percent="2" />
+					</inputs>					
 					<outputs>
 						<outputProduct name="OP_SEED" percent="100" />
-					</outputs>
-					
-					<playerTrigger playerTriggerNode="PlayerTrigger" drawUI="false"/>
-					
+					</outputs>					
+					<playerTrigger playerTriggerNode="PlayerTrigger" drawUI="false"/>					
 					<operatingParts>						
 						<sounds>
 							<sound geSoundNode="audio"/>
 						</sounds>
-
 						<lighting>
 							<beaconLights>
 								<beaconLight node="beacon" filename="$data/shared/assets/beaconLights/lizard/beaconLight01.xml" />
@@ -111,13 +116,17 @@
 			</productLines>	
 			
 			<i3dMappings>  
-				<i3dMapping id="exactFillRootNode" node="2|0" />
-    			<i3dMapping id="IN_Display" node="2|1" />			
+				<i3dMapping id="exactFillRootNode1" node="2|0|0" />
+				<i3dMapping id="exactFillRootNode2" node="2|1|0" />
+    			<i3dMapping id="IN_Display1" node="2|0|1" />			
+    			<i3dMapping id="IN_Display2" node="2|1|1" />			
 				<i3dMapping id="dischargeNode" node="3|0|1" />
 				<i3dMapping id="OP_Display" node="3|1" />
 				<i3dMapping id="start1" node="6|0" />
 				<i3dMapping id="end2" node="6|1|0" />
 				<i3dMapping id="start2" node="6|1" />
+				<i3dMapping id="start3" node="6|2" />
+    			<i3dMapping id="end3" node="6|2|0" />
 				<i3dMapping id="end1" node="6|0|0" />
 				<i3dMapping id="PlayerTrigger" node="4" />
 				<i3dMapping id="beacon" node="8" />
@@ -125,8 +134,7 @@
 				<i3dMapping id="grain" node="3|0|2|0" />
     			<i3dMapping id="smoke" node="3|0|2|1" />
     			<i3dMapping id="audio" node="9" />
-			</i3dMappings>
-				
+			</i3dMappings>				
 		</productionFactory>
 	</productionFactories>
 </placeable>

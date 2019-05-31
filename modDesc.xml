@@ -16,7 +16,7 @@
 		</es>
 	</description>
     
-	<iconFilename>store.dds</iconFilename>
+	<iconFilename>icon_seedmaker.dds</iconFilename>
     <multiplayer supported="true"/>  
 	
 	<l10n>

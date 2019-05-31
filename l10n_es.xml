@@ -2,9 +2,10 @@
 <l10n>
 	<elements>
 		<e k="GlobalCompanyPlaceable_SeedMaker_FactoryName" v="SeedMaker"/>
-		<e k="GlobalCompanyPlaceable_SeedMaker_FactoryDescription" v="La SeedMaker fabrica semillas a partir de grano."/>
+		<e k="GlobalCompanyPlaceable_SeedMaker_FactoryDescription" v="La SeedMaker fabrica semillas a partir de grano. Se requiere tinción adicional (fertilizante líquido)."/>
 		<e k="GlobalCompanyPlaceable_SeedMaker_productLine_seed" v="Producción de Semillas"/>
 		<e k="GlobalCompanyPlaceable_SeedMaker_Input1" v="Grano"/>
+		<e k="GlobalCompanyPlaceable_SeedMaker_Input2" v="Abono líquido"/>
 		<e k="GlobalCompanyPlaceable_SeedMaker_Output1" v="Semillas"/>
 	</elements>
 </l10n>
