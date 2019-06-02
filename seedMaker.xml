@@ -25,6 +25,10 @@
         <clearArea startIndex="7|0" widthIndex="7|1" heightIndex="7|2"/>
     </clearAreas>
 	
+    <triggerMarkers>
+        <triggerMarker node="5" />
+    </triggerMarkers>
+	
 	<productionFactories>
 		<productionFactory indexName="SEEDMAKER" saveId="globalCompany_seedMaker">
 			<guiInformation title="GlobalCompanyPlaceable_SeedMaker_FactoryName" imageFilename="store.dds" description="GlobalCompanyPlaceable_SeedMaker_FactoryDescription"/>
