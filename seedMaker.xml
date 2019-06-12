@@ -37,7 +37,7 @@
 			
 			<registerUnloadingTriggers>
 				<unloadingTrigger name="UnloadingTriggerGrain" exactFillRootNode="exactFillRootNode1" />
-				<unloadingTrigger name="UnloadingTriggerLiquid" exactFillRootNode="exactFillRootNode2" />
+				<unloadingTrigger name="UnloadingTriggerLiquid" exactFillRootNode="exactFillRootNode2" palletTriggerNode="palletTrigger" />
 			</registerUnloadingTriggers>
 
 			<registerLoadingTriggers>
@@ -148,6 +148,7 @@
     			<i3dMapping id="audio" node="9" />
 				<i3dMapping id="plane1" node="11|1" />
     			<i3dMapping id="plane2" node="10|1" />
+				<i3dMapping id="palletTrigger" node="2|1|2" />
 			</i3dMappings>				
 		</productionFactory>
 	</productionFactories>
