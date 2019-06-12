@@ -8,11 +8,26 @@
     </title>
     
 	<description>
-		<en><![CDATA[The SeedMaker makes seeds from grain.]]>
+		<en><![CDATA[The SeedMaker makes seeds from grain.
+
+Production / Hour: 1.000 Liter
+
+Required Inputs: Grain, Liquidfertilizer
+Output: Seeds]]>
 		</en>
-		<de><![CDATA[Der SeedMaker stellt aus Getreide Saatgut her.]]>
+		<de><![CDATA[Der SeedMaker stellt aus Getreide Saatgut her.
+
+Produktion / Stunde: 1.000 Liter
+
+Benötigte Rohstoffe: Getreide, Flüssigdünger
+Produkt: Saatgut]]>
 		</de>
-		<es><![CDATA[La SeedMaker fabrica semillas a partir de grano.]]>
+		<es><![CDATA[La SeedMaker fabrica semillas a partir de grano.
+		
+Producción / hora: 1.000 litros
+
+Materias primas necesarias: cereales, fertilizantes líquidos.
+Producto: Semillas]]>
 		</es>
 	</description>
     

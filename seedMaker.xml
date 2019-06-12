@@ -105,7 +105,7 @@
 			</registerOutputProducts>
 			
 			<productLines>
-				<productLine autoLineStart="true" outputPerHour="1000" name="GlobalCompanyPlaceable_SeedMaker_productLine_seed" >
+				<productLine autoLineStart="true" outputPerHour="1000" title="GlobalCompanyPlaceable_SeedMaker_productLine_seed" >
 					<inputs>
 						<inputProduct name="IP_GRAIN" percent="100" />
 						<inputProduct name="IP_LIQUID" percent="2" />
