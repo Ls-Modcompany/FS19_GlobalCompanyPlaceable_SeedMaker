@@ -25,6 +25,12 @@
         <clearArea startIndex="7|0" widthIndex="7|1" heightIndex="7|2"/>
     </clearAreas>
 	
+	<leveling requireLeveling="true" maxSmoothDistance="5" maxSlope="30" maxEdgeAngle="20" >
+        <levelAreas>
+            <levelArea startNode="7|0" widthNode="7|1" heightNode="7|2" groundType="asphalt"/>
+        </levelAreas>
+    </leveling>
+	
     <triggerMarkers>
         <triggerMarker node="5" />
     </triggerMarkers>
