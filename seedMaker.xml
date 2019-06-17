@@ -8,6 +8,10 @@
         <lifetime>1000</lifetime>
         <rotation>0</rotation>
         <brand>GCPLACEABLE</brand>
+        <specs>
+            <capacity>50000</capacity>
+            <fillTypes>wheat barley herbicide</fillTypes>
+        </specs>
 		<functions>
 			<function>$l10n_function_seedMaker</function>
         </functions>
@@ -75,7 +79,7 @@
 				</inputProduct>
 				<inputProduct name="IP_LIQUID" capacity="2000" title="GlobalCompanyPlaceable_SeedMaker_Input2" >
 					<fillTypes>
-						<fillType name="liquidfertilizer" />
+						<fillType name="herbicide" />
 					</fillTypes>				
 					<inputMethods>
 						<unloadingTrigger name="UnloadingTriggerLiquid"/>
