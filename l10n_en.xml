@@ -2,10 +2,10 @@
 <l10n>
 	<elements>
 		<e k="GlobalCompanyPlaceable_SeedMaker_FactoryName" v="SeedMaker"/>
-		<e k="GlobalCompanyPlaceable_SeedMaker_FactoryDescription" v="The SeedMaker makes seeds from grain. Additional stain (liquid fertilizer) is required."/>
+		<e k="GlobalCompanyPlaceable_SeedMaker_FactoryDescription" v="The SeedMaker makes seeds from grain. Additional stain (Herbicide) is required."/>
 		<e k="GlobalCompanyPlaceable_SeedMaker_productLine_seed" v="Seedproduction"/>
 		<e k="GlobalCompanyPlaceable_SeedMaker_Input1" v="Grain"/>
-		<e k="GlobalCompanyPlaceable_SeedMaker_Input2" v="Liquidfertilizer"/>
+		<e k="GlobalCompanyPlaceable_SeedMaker_Input2" v="Herbicide"/>
 		<e k="GlobalCompanyPlaceable_SeedMaker_Output1" v="Seeds"/>
 	</elements>
 </l10n>

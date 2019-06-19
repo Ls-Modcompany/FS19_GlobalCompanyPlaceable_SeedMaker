@@ -12,22 +12,28 @@
 
 Production / Hour: 1.000 Liter
 
-Required Inputs: Grain, Liquidfertilizer
-Output: Seeds]]>
+Required Inputs: Grain, Herbicide
+Output: Seeds
+
+Information: Mod only playable in combination with GlobalCompany!]]>
 		</en>
 		<de><![CDATA[Der SeedMaker stellt aus Getreide Saatgut her.
 
 Produktion / Stunde: 1.000 Liter
 
-Benötigte Rohstoffe: Getreide, Flüssigdünger
-Produkt: Saatgut]]>
+Benötigte Rohstoffe: Getreide, Pflanzenschutzmittel
+Produkt: Saatgut
+
+Information: Mod nur in Verbindung mit GlobalCompany spielbar!]]>
 		</de>
 		<es><![CDATA[La SeedMaker fabrica semillas a partir de grano.
 		
 Producción / hora: 1.000 litros
 
-Materias primas necesarias: cereales, fertilizantes líquidos.
-Producto: Semillas]]>
+Materias primas necesarias: cereales, Herbicida.
+Producto: Semillas
+
+Información: Mod sólo se puede jugar en combinación con GlobalCompany!]]>
 		</es>
 	</description>
     
