@@ -41,7 +41,7 @@
 	
 	<productionFactories>
 		<productionFactory indexName="SEEDMAKER" saveId="globalCompany_seedMaker">
-			<guiInformation title="GlobalCompanyPlaceable_SeedMaker_FactoryName" imageFilename="store.dds" description="GlobalCompanyPlaceable_SeedMaker_FactoryDescription"/>
+			<guiInformation title="GlobalCompanyPlaceable_SeedMaker_FactoryName" imageFilename="store.dds" description="GlobalCompanyPlaceable_SeedMaker_FactoryDescription" cameraFeed="gui_camera"/>
 			
 			<operation updateDelayMinutes="10" showInGlobalGUI="true" canPurchaseInputs="true"/>
 			
@@ -56,16 +56,11 @@
 					<sounds fillSoundIdentifier="fillSound01" />
 					<effectNode effectNode="grain" materialType="unloading" materialTypeId="3" fadeTime="0.5" />
 					<effectNode effectNode="smoke" materialType="smoke"     materialTypeId="1" fadeTime="0.5" />
-
-					<triggerStatus>
-						<!-- <fallOffShader node="mapTargetMarker" /> -->
-						<!--visNodes noObjectNode="green" foundObjectNode="yellow" fillingActiveNode="red" /-->
-					</triggerStatus>
 				</loadingTrigger>
 			</registerLoadingTriggers>
 			
 			<registerInputProducts>				
-				<inputProduct name="IP_GRAIN" capacity="50000" title="GlobalCompanyPlaceable_SeedMaker_Input1" >
+				<inputProduct name="IP_GRAIN" capacity="50000" title="GlobalCompanyPlaceable_SeedMaker_Input1" purchasePricePerLiter="1.6"> <!-- A little more than buying a pallet -->
 					<fillTypes>
 						<fillType name="wheat" />
 						<fillType name="barley" />
@@ -77,7 +72,7 @@
 						<display displayType="LEVEL" numbers="IN_Display1" emptyNumberColor="1 0 0 1" numberColor="1 1 0 1" fullNumberColor="0 1 0 1"/>
 					</digitalDisplays>
 				</inputProduct>
-				<inputProduct name="IP_LIQUID" capacity="2000" title="GlobalCompanyPlaceable_SeedMaker_Input2" >
+				<inputProduct name="IP_LIQUID" capacity="2000" title="GlobalCompanyPlaceable_SeedMaker_Input2" purchasePricePerLiter="1.3"> <!-- A little more than buying a tank -->
 					<fillTypes>
 						<fillType name="herbicide" />
 					</fillTypes>				
@@ -115,7 +110,7 @@
 			</registerOutputProducts>
 			
 			<productLines>
-				<productLine autoLineStart="true" outputPerHour="1000" title="GlobalCompanyPlaceable_SeedMaker_productLine_seed" >
+				<productLine autoLineStart="true" outputPerHour="1000" title="GlobalCompanyPlaceable_SeedMaker_productLine_seed" showInGUI="true">
 					<inputs>
 						<inputProduct name="IP_GRAIN" percent="100" />
 						<inputProduct name="IP_LIQUID" percent="2" />
@@ -123,7 +118,7 @@
 					<outputs>
 						<outputProduct name="OP_SEED" percent="100" />
 					</outputs>					
-					<playerTrigger playerTriggerNode="PlayerTrigger" drawUI="false"/>					
+					<playerTrigger playerTriggerNode="PlayerTrigger" showPopupUI="true"/>					
 					<operatingParts>						
 						<sounds>
 							<sound geSoundNode="audio"/>
@@ -159,6 +154,7 @@
 				<i3dMapping id="plane1" node="11|1" />
     			<i3dMapping id="plane2" node="10|1" />
 				<i3dMapping id="palletTrigger" node="2|1|2" />
+				<i3dMapping id="gui_camera" node="12"/>
 			</i3dMappings>				
 		</productionFactory>
 	</productionFactories>

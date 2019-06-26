@@ -1,16 +1,21 @@
 --
 -- GC_Checker
 --
--- @Interface: --
--- @Author: LS-Modcompany
--- @Date: 07.03.2018
--- @Version: 1.0.0.0
+-- @Interface: 1.4.0.0 b5007
+-- @Author: LS-Modcompany / GtX
+-- @Date: 24.04.2019
+-- @Version: 1.1.0.0
 --
--- @Support: LS-Modcompany
+-- @Support: https://ls-modcompany.com
 --
 -- Changelog:
 --
--- 	v1.0.0.0 ():
+-- 	v1.1.0.0 (24.04.2019):
+-- 		- remove 'modEventListener' as in FS19 this is now a problem if more than one script in a mod is using it.
+--		- This is done to support 'addonScripts' if needed.
+--
+--
+-- 	v1.0.0.0 (07.03.2019):
 -- 		- initial fs19 (GtX)
 --		- 'de' warning translation (aPuehri)
 --
@@ -30,16 +35,16 @@ GC_Checker = {}
 
 function GC_Checker:init()
 	if g_globalCompanyChecker == nil then
+		GC_Checker.modsToCheck = {}
+		GC_Checker.errorsToShow = {}		
+		GC_Checker.startUpdateTime = 2000
+
+		Mission00.onStartMission = Utils.appendedFunction(Mission00.onStartMission, GC_Checker.onStartMission);
+
 		getfenv(0)["g_globalCompanyChecker"] = GC_Checker
-		
-		g_globalCompanyChecker.modsToCheck = {}
-		g_globalCompanyChecker.errorsToShow = {}		
-		g_globalCompanyChecker.startUpdateTime = 2000
-		
-		addModEventListener(GC_Checker)
 	end
 	
-	GC_Checker:addModToList(g_currentModName)
+	g_globalCompanyChecker:addModToList(g_currentModName)
 end
 
 function GC_Checker:addModToList(modName)
@@ -48,14 +53,17 @@ function GC_Checker:addModToList(modName)
 	end
 end
 
-function GC_Checker:loadMap(i3dFilePath)
+function GC_Checker:onStartMission()
 	if g_company == nil then	
+		local needUpdateable = false;
+		
 		for modName, warningText in pairs (g_globalCompanyChecker.modsToCheck) do
 			local mod = g_modManager:getModByName(modName)
 			local xmlFile = loadXMLFile("TempModDesc", mod.modFile)
 			if xmlFile ~= nil and xmlFile ~= 0 then
 				local versionString = getXMLString(xmlFile, "modDesc.globalCompany#minimumVersion")
 				if versionString ~= nil then					
+					needUpdateable = true;
 					local data = {}
 					data.modData = mod
 					data.showWarning = true
@@ -72,14 +80,20 @@ function GC_Checker:loadMap(i3dFilePath)
 				delete(xmlFile)
 			end
 		end
+		
+		if needUpdateable then
+			g_currentMission:addUpdateable(g_globalCompanyChecker);
+		end;
 	else	
-		self:delete()
+		g_globalCompanyChecker:delete()
 	end
 end
 
 function GC_Checker:delete()
-	removeModEventListener(g_globalCompanyChecker)
-	g_globalCompanyChecker = nil
+	if g_globalCompanyChecker ~= nil then
+		g_currentMission:removeUpdateable(g_globalCompanyChecker)
+		getfenv(0)["g_globalCompanyChecker"] = nil;
+	end;
 end
 
 function GC_Checker:update(dt)
@@ -116,13 +130,15 @@ function GC_Checker:showModWarningGUI(mod)
 
 	local text = string.format(mod.warningText, mod.versionString, url)
 
-	g_gui:showYesNoDialog({title = title,
-						   text = text,
-						   dialogType = DialogElement.TYPE_WARNING,
-						   callback = g_globalCompanyChecker.openModHubLink,
-						   target = g_globalCompanyChecker,
-						   yesText = mod.okButtonText,
-						   noText = mod.downloadButtonText})
+	g_gui:showYesNoDialog({
+		title = title,
+		text = text,
+		dialogType = DialogElement.TYPE_WARNING,
+		callback = g_globalCompanyChecker.openModHubLink,
+		target = g_globalCompanyChecker,
+		yesText = mod.okButtonText,
+		noText = mod.downloadButtonText
+	})
 end
 
 function GC_Checker:openModHubLink(isYes)
@@ -142,8 +158,10 @@ end
 -- Do not add or change texts here. Each mod loads its own text in other languages if needed from the 'l10n' entries.
 -- Any changes here will / can  break other 'Global Company' mods when loading!!!!!
 function GC_Checker.getWarningText(language)
-	local warnings = {["en"] = "Global Company Version %s or greater is required for this mod / map to operate. Please visit modHub download link for the latest official version or visit '%s' for Global Company support.",
-					  ["de"] = "Für die Verwendung dieses Mods / dieser Map ist Global Company Version %s oder höher erforderlich. Bitte im ModHub die aktuelle offizielle Version downloaden, oder besuche '%s' für den Global Company Support."}
+	local warnings = {
+		["en"] = "Global Company Version %s or greater is required for this mod / map to operate. Please visit modHub download link for the latest official version or visit '%s' for Global Company support.",
+		["de"] = "Für die Verwendung dieses Mods / dieser Map ist Global Company Version %s oder höher erforderlich. Bitte im ModHub die aktuelle offizielle Version downloaden, oder besuche '%s' für den Global Company Support."
+	}
 
 	if warnings[language] ~= nil then
 		return warnings[language]

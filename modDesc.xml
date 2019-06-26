@@ -4,18 +4,18 @@
     <version>1.0.0.0</version>
     
 	<title>
-        <en><![CDATA[GlobalCompany - SeedMaker]]></en>
+        <en>GlobalCompany - SeedMaker</en>
     </title>
     
 	<description>
-		<en><![CDATA[The SeedMaker makes seeds from grain.
+		<en><![CDATA[This SeedMaker makes seeds from Grain and Herbicide.
 
 Production / Hour: 1.000 Liter
 
 Required Inputs: Grain, Herbicide
 Output: Seeds
 
-Information: Mod only playable in combination with GlobalCompany!]]>
+Information: Mod is only usable in combination with GlobalCompany!]]>
 		</en>
 		<de><![CDATA[Der SeedMaker stellt aus Getreide Saatgut her.
 
@@ -42,7 +42,7 @@ Información: Mod sólo se puede jugar en combinación con GlobalCompany!]]>
 	
 	<l10n>
 		<text name="function_seedMaker">
-			<en><![CDATA[The SeedMaker makes seeds from grain.]]></en>
+			<en><![CDATA[This SeedMaker makes seeds from grain.]]></en>
 			<de><![CDATA[Der SeedMaker stellt aus Getreide Saatgut her.]]></de>
 			<es><![CDATA[La SeedMaker fabrica semillas a partir de grano.]]></es>
 		</text>		

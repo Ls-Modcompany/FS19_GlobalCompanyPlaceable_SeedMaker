@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <l10n>
 	<elements>
-		<e k="GlobalCompanyPlaceable_SeedMaker_FactoryName" v="SeedMaker"/>
-		<e k="GlobalCompanyPlaceable_SeedMaker_FactoryDescription" v="The SeedMaker makes seeds from grain. Additional stain (Herbicide) is required."/>
-		<e k="GlobalCompanyPlaceable_SeedMaker_productLine_seed" v="Seedproduction"/>
+		<e k="GlobalCompanyPlaceable_SeedMaker_FactoryName" v="Seed Maker"/>
+		<e k="GlobalCompanyPlaceable_SeedMaker_FactoryDescription" v="This Seed Maker makes seeds from grain. Herbicide is also required."/>
+		<e k="GlobalCompanyPlaceable_SeedMaker_productLine_seed" v="Seed Production"/>
 		<e k="GlobalCompanyPlaceable_SeedMaker_Input1" v="Grain"/>
 		<e k="GlobalCompanyPlaceable_SeedMaker_Input2" v="Herbicide"/>
 		<e k="GlobalCompanyPlaceable_SeedMaker_Output1" v="Seeds"/>
