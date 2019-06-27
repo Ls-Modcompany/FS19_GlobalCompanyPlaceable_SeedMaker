@@ -43,7 +43,7 @@
 		<productionFactory indexName="SEEDMAKER" saveId="globalCompany_seedMaker">
 			<guiInformation title="GlobalCompanyPlaceable_SeedMaker_FactoryName" imageFilename="store.dds" description="GlobalCompanyPlaceable_SeedMaker_FactoryDescription" cameraFeed="gui_camera"/>
 			
-			<operation updateDelayMinutes="10" showInGlobalGUI="true" canPurchaseInputs="true"/>
+			<operation updateDelayMinutes="10" showInGlobalGUI="true" />
 			
 			<registerUnloadingTriggers>
 				<unloadingTrigger name="UnloadingTriggerGrain" exactFillRootNode="exactFillRootNode1" />
@@ -60,25 +60,33 @@
 			</registerLoadingTriggers>
 			
 			<registerInputProducts>				
-				<inputProduct name="IP_GRAIN" capacity="50000" title="GlobalCompanyPlaceable_SeedMaker_Input1" purchasePricePerLiter="1.6"> <!-- A little more than buying a pallet -->
+				<inputProduct name="IP_GRAIN" capacity="50000" title="GlobalCompanyPlaceable_SeedMaker_Input1" > 
 					<fillTypes>
 						<fillType name="wheat" />
 						<fillType name="barley" />
-					</fillTypes>				
+					</fillTypes>
+					
+					<purchase fixedPricePerLitre="1.6" /> <!-- A little more than buying a pallet of wheat -->
+					
 					<inputMethods>
 						<unloadingTrigger name="UnloadingTriggerGrain"/>
 					</inputMethods>						
+					
 					<digitalDisplays>
 						<display displayType="LEVEL" numbers="IN_Display1" emptyNumberColor="1 0 0 1" numberColor="1 1 0 1" fullNumberColor="0 1 0 1"/>
 					</digitalDisplays>
 				</inputProduct>
-				<inputProduct name="IP_LIQUID" capacity="2000" title="GlobalCompanyPlaceable_SeedMaker_Input2" purchasePricePerLiter="1.3"> <!-- A little more than buying a tank -->
+				<inputProduct name="IP_LIQUID" capacity="2000" title="GlobalCompanyPlaceable_SeedMaker_Input2">
 					<fillTypes>
 						<fillType name="herbicide" />
 					</fillTypes>				
+					
+					<purchase fixedPricePerLitre="1.3" /> <!-- A little more than buying a tank -->
+					
 					<inputMethods>
 						<unloadingTrigger name="UnloadingTriggerLiquid"/>
 					</inputMethods>		
+					
 					<movers>
 						<mover node="plane1">
 							<scale minimum="0.99 0 0.99" maximum="0.99 0.99 0.99" />
@@ -87,6 +95,7 @@
 							<scale minimum="0.99 0 0.99" maximum="0.99 0.99 0.99" />
 						</mover>
 					</movers>				
+					
 					<digitalDisplays>
 						<display displayType="LEVEL" numbers="IN_Display2" emptyNumberColor="1 0 0 1" numberColor="1 1 0 1" fullNumberColor="0 1 0 1"/>
 					</digitalDisplays>
