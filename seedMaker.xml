@@ -103,7 +103,7 @@
 			</registerInputProducts>
 			
 			<registerOutputProducts>
-				<outputProduct name="OP_SEED" fillType="seeds" capacity="50000" title="GlobalCompanyPlaceable_SeedMaker_Output1" >
+				<outputProduct name="OP_SEED" fillType="seeds" capacity="50000" >
 					<outputMethods>
 						<loadingTrigger name="LoadingTrigger" />
 						<objectSpawner xmlFilename="$data/objects/bigBagContainer/bigBagContainerSeeds.xml">
