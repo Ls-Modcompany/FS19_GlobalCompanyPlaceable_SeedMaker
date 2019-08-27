@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<l10n>
+	<elements>
+		<e k="GlobalCompanyPlaceable_SeedMaker_FactoryName" v="Fabrique de semences"/>
+		<e k="GlobalCompanyPlaceable_SeedMaker_FactoryDescription" v="Cette fabrique de semences produit des semences à partir de grain et d'herbicide."/>
+		<e k="GlobalCompanyPlaceable_SeedMaker_productLine_seed" v="Production de semences"/>
+		<e k="GlobalCompanyPlaceable_SeedMaker_Input1" v="Grain"/>
+		<e k="GlobalCompanyPlaceable_SeedMaker_Input2" v="Herbicide"/>
+		<e k="GlobalCompanyPlaceable_SeedMaker_Output1" v="Semences"/>
+	</elements>
+</l10n>

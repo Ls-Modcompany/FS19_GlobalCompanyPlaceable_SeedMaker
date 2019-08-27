@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="44">
 	<author>LS-Modcompany / kevink98 - Eribus</author>
-    <version>1.0.0.0</version>
+    <version>1.0.1.0</version>
     
 	<title>
         <en>GlobalCompany - SeedMaker</en>
@@ -15,7 +15,11 @@ Production / Hour: 1.000 Liter
 Required Inputs: Grain, Herbicide
 Output: Seeds
 
-Information: Mod is only usable in combination with GlobalCompany!]]>
+Information: Mod is only usable in combination with GlobalCompany!
+
+Changelog 1.0.1.0:
+- Trigger adjusted
+- Add language france]]>
 		</en>
 		<de><![CDATA[Der SeedMaker stellt aus Getreide Saatgut her.
 
@@ -24,7 +28,11 @@ Produktion / Stunde: 1.000 Liter
 Benötigte Rohstoffe: Getreide, Pflanzenschutzmittel
 Produkt: Saatgut
 
-Information: Mod nur in Verbindung mit GlobalCompany spielbar!]]>
+Information: Mod nur in Verbindung mit GlobalCompany spielbar!
+
+Changelog 1.0.1.0:
+- Trigger angepasst
+- Sprache Französich hinzugefügt]]>
 		</de>
 		<es><![CDATA[La SeedMaker fabrica semillas a partir de grano.
 		
@@ -35,6 +43,19 @@ Producto: Semillas
 
 Información: Mod sólo se puede jugar en combinación con GlobalCompany!]]>
 		</es>
+		<fr><![CDATA[Cette fabrique de semences produit des semences à partir de blé/orge et d'herbicide.
+
+Production/heure : 1 000 litres
+
+Entrée : Grain, herbicide
+Sortie : Semences
+
+Information : Ce mod requiert le mod GlobalCompany pour fonctionner !
+
+Changelog 1.0.1.0 :
+- Réglage de la gâchette
+- Ajouter langue france]]>
+		</fr>
 	</description>
     
 	<iconFilename>icon_seedmaker.dds</iconFilename>
@@ -52,7 +73,7 @@ Información: Mod sólo se puede jugar en combinación con GlobalCompany!]]>
 		<sourceFile filename="GC_Checker.lua" />
     </extraSourceFiles>
 	
-	<globalCompany minimumVersion="1.0.0.0" />
+	<globalCompany minimumVersion="1.1.0.0" />
   	
 	<storeItems>
         <storeItem xmlFilename="seedMaker.xml"/>
