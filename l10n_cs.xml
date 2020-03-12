@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<l10n>
+	<elements>
+		<e k="GlobalCompanyPlaceable_SeedMaker_FactoryName" v="制种机"/>
+		<e k="GlobalCompanyPlaceable_SeedMaker_FactoryDescription" v="这种制种机用谷物和除草剂制作种子."/>
+		<e k="GlobalCompanyPlaceable_SeedMaker_productLine_seed" v="种子生产"/>
+		<e k="GlobalCompanyPlaceable_SeedMaker_Input1" v="谷物"/>
+		<e k="GlobalCompanyPlaceable_SeedMaker_Input2" v="除草剂"/>
+		<e k="GlobalCompanyPlaceable_SeedMaker_Output1" v="种子"/>
+	</elements>
+</l10n>

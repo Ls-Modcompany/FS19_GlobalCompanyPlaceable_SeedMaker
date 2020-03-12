@@ -19,8 +19,7 @@ Information: Mod is only usable in combination with GlobalCompany!
 
 Changelog 1.0.1.0:
 - Trigger adjusted
-- Add language france]]>
-		</en>
+- Add language france]]></en>
 		<de><![CDATA[Der SeedMaker stellt aus Getreide Saatgut her.
 
 Produktion / Stunde: 1.000 Liter
@@ -32,8 +31,7 @@ Information: Mod nur in Verbindung mit GlobalCompany spielbar!
 
 Changelog 1.0.1.0:
 - Trigger angepasst
-- Sprache Französich hinzugefügt]]>
-		</de>
+- Sprache Französich hinzugefügt]]></de>
 		<es><![CDATA[La SeedMaker fabrica semillas a partir de grano.
 		
 Producción / hora: 1.000 litros
@@ -41,8 +39,7 @@ Producción / hora: 1.000 litros
 Materias primas necesarias: cereales, Herbicida.
 Producto: Semillas
 
-Información: Mod sólo se puede jugar en combinación con GlobalCompany!]]>
-		</es>
+Información: Mod sólo se puede jugar en combinación con GlobalCompany!]]></es>
 		<fr><![CDATA[Cette fabrique de semences produit des semences à partir de blé/orge et d'herbicide.
 
 Production/heure : 1 000 litres
@@ -54,8 +51,7 @@ Information : Ce mod requiert le mod GlobalCompany pour fonctionner !
 
 Changelog 1.0.1.0 :
 - Réglage de la gâchette
-- Ajouter langue france]]>
-		</fr>
+- Ajouter langue france]]></fr>
 	</description>
     
 	<iconFilename>icon_seedmaker.dds</iconFilename>
